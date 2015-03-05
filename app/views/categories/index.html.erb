@@ -1,0 +1,23 @@
+<div ng-app="Category">
+  <h1>Category</h1>
+
+  <div ng-controller="CategoryCtrl">
+
+    <form ng-submit="addCategory()">
+      <input type="text" ng-model="newCategory.name">
+      <input type="submit" value="Add">
+    </form>
+
+    <hr/>
+    <table class="categories">
+      <tbody>
+        <tr ng-repeat="category in categories">
+          <td>
+            {{category.name}}
+            <a ng-click="removeCategory(category)">X</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+ </div>
+</div>
